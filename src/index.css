@@ -1,13 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Texturina:wght@200&family=Yeon+Sung&display=swap");
+
+/* 
+font-family: 'Texturina', serif;
+font-family: 'Yeon Sung', cursive; 
+font-family: 'Dancing Script', cursive;
+*/
+
+/*  
+Color Scheme
+ 1. Accent - #ff8e71
+ 2. Primary - #583d72
+ 3. Basics- 
+  a. #9f5f80
+  b. #ffba93
+ */
+
+/* 
+                '--clamph0': ClampBuilder('320', '840', '2', '2.5'),
+                '--clamph1': ClampBuilder('320', '840', '2', '3'),
+                '--clamph2': ClampBuilder('320', '840', '1.4', '2.8'),
+                '--clamph3': ClampBuilder('320', '840', '1.2', '2.3'),
+                '--clamph4': ClampBuilder('320', '840', '1', '2'),
+                '--clampP': ClampBuilder('320', '840', '0.94', '1.5')
+
+
+  h1 {
+    font-size: var(--clamph1);
+  }
+  h2 {
+    font-size: var(--clamph2);
+  }
+  h3 {
+    font-size: var(--clamph3);
+  }
+
+  h4,
+  p {
+    font-weight: weight(regular);
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    font-size: var(--clampP);
+}
+
+ */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

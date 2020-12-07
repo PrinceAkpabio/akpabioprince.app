@@ -1,12 +1,13 @@
 import React from 'react';
 import { TextStyle } from './Assets/styles/config';
+import HomePage from './pages/home';
 
 
 function App() {
   return (
     <div className="App"
     style={TextStyle}>
-     <h1>Yo! I'm Prince</h1>
+    <HomePage />
     </div>
   );
 }

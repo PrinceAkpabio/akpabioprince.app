@@ -1,0 +1,49 @@
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.5rem;
+  background: linear-gradient(to right, black 30%, $sub1 30%, $sub1 100%);
+
+  #Nav-logo {
+    display: flex;
+    justify-content: center;
+    color: $accent;
+    width: 30%;
+  }
+
+  &-menu-wrapper {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    .Nav-menu {
+      display: flex;
+      list-style: none;
+
+      &-items {
+        padding-right: 0.8rem;
+        cursor: pointer;
+        color: $text-color;
+
+        &:nth-child(5) {
+          padding-right: 0;
+        }
+
+        .active {
+          padding-bottom: 0.4rem;
+          border: 1px solid $accent;
+        }
+      }
+    }
+  }
+
+  &-mb-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobile-menu) {
+  .Nav-mb-menu {
+    display: flex;
+  }
+}

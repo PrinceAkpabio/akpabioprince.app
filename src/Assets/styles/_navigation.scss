@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width: $mobile-menu) {
+@media screen and (max-width: $mobile-menu) {
   .Nav-mb-menu {
     display: flex;
   }

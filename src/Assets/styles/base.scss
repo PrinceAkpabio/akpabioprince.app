@@ -20,12 +20,12 @@ body {
 
 h1,
 h2 {
-  font-family: "Texturina", serif;
+  font-family: $font1;
 }
 h3,
 h4,
 p {
-  font-family: "Yeon Sung", cursive;
+  font-family: $font2;
 }
 h1 {
   font-size: var(--clamph1);

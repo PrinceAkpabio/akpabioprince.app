@@ -6,11 +6,19 @@ export function ClampBuilder( minWidthPx, maxWidthPx, minFontSize, maxFontSize )
   const maxWidth = maxWidthPx / pixelsPerRem;
 
   const slope = ( maxFontSize - minFontSize ) / ( maxWidth - minWidth );
- const yAxisIntersection = -minWidth * slope + minFontSize
- 
- console.log(pixelsPerRem);
+ const yAxisIntersection = -minWidth * slope + minFontSize;
 
   return `clamp( ${ minFontSize }rem, ${ yAxisIntersection }rem + ${ slope * 100 }vw, ${ maxFontSize }rem )`
+}
+
+
+export const TextStyle = {
+'--clamph0': ClampBuilder('320', '840', '2', '2.5'),
+'--clamph1': ClampBuilder('320', '840', '2', '3'),
+'--clamph2': ClampBuilder('320', '840', '1.4', '2.8'),
+'--clamph3': ClampBuilder('320', '840', '1.2', '2.3'),
+'--clamph4': ClampBuilder('320', '840', '1', '2'),
+'--clampP': ClampBuilder('320', '840', '0.94', '1.5')
 }
 
 

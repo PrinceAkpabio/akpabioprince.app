@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Texturina:wght@200&family=Yeon+Sung&display=swap");
 
 @import "./variables";
-
+@import "./_navigation";
 /* 
 font-family: 'Texturina', serif;
 font-family: 'Yeon Sung', cursive; 
 font-family: 'Dancing Script', cursive;
 */
-
 * {
   box-sizing: border-box;
   margin: 0;

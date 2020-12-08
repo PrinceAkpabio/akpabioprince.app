@@ -1,5 +1,5 @@
 .hero {
-  height: calc(80vh - 2.5rem);
+  height: var(--clamphero);
   position: relative;
   .hero-imgs {
     display: flex;
@@ -16,13 +16,13 @@
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
-      height: 60%;
+      height: var(--clampimg);
     }
     .hero-imgs-dots {
       position: relative;
       margin-top: 0;
       width: 100%;
-      height: 40%;
+      height: var(--clampdots);
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: contain;
@@ -47,8 +47,8 @@
     position: absolute;
     flex-direction: column;
     justify-content: center;
-    bottom: 8%;
-    left: 8%;
+    bottom: 5%;
+    left: 5%;
     color: $accent;
 
     h2 {
@@ -67,40 +67,65 @@
   }
 }
 
-// Tablet
-@media screen and (min-width: $tab-sm) {
-  .hero > .hero-imgs {
-    display: flex;
-    flex-direction: row;
+// mobile-sm
+@media screen and (min-width: $mobile-sm) and (min-height: 562px) {
+  // .hero {
+  //   height: var(--clampherosm);
+  // }
+  .hero-img-hero {
+    height: var(--clampimgsm);
+  }
+  .hero > .hero-imgs > .hero-imgs-dots {
+    position: relative;
+    margin-top: 0;
     width: 100%;
-    height: 100%;
+    height: var(--clampdotsm);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $primary;
+
+    #dots {
+      position: absolute;
+      width: 30vw;
+      height: 50%;
+      bottom: 1%;
+      right: 4%;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      color: $sub1;
+      background-size: contain;
+    }
+  }
+}
+
+// Tablet
+@media screen and (min-width: $tab-sm) and (min-height: 547px) {
+  .hero {
+    height: var(--clampherotab);
+  }
+  .hero > .hero-imgs {
+    flex-direction: row;
     .hero-imgs-hero {
       order: 1;
-      margin-top: 0;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
       width: 60%;
       height: 100%;
     }
     .hero-imgs-dots {
       order: 0;
-      margin-top: 0;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: contain;
       background-color: $primary;
       width: 40%;
       height: 100%;
+
+      #dots {
+        top: -1%;
+        left: 7%;
+      }
     }
   }
 
-  .hero-content {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    bottom: 12%;
+  .hero > .hero-content {
+    bottom: 22%;
     left: 8%;
     color: $accent;
 

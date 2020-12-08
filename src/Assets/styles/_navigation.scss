@@ -59,13 +59,13 @@
       margin: 0;
       left: -100vw;
       width: 40%;
-      height: calc(100vh - 2.5rem);
+      height: calc(100vh - 2.55rem);
       background-color: $primary;
-      transition: all 2s ease-in-out;
+      @include transition-slow;
 
       &.active {
         left: 0;
-        transition: all 2s ease-in-out;
+        @include transition-slow;
       }
       .Nav-menu {
         display: grid;
@@ -85,9 +85,14 @@
     .Nav-mb-menu {
       display: flex;
       padding-right: 2rem;
+      @include transition-slow;
 
       ion-icon {
         font-size: 2.1rem;
+        @include transition-ease;
+        &:hover {
+          color: $accent;
+        }
       }
     }
   }

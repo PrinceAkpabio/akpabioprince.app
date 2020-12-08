@@ -27,12 +27,13 @@ export function ImgBuilder( minWidthPx, maxWidthPx, minFontSize, maxFontSize ) {
 
 export const TextStyle = {
 '--clamphero': ImgBuilder('320', '695', '80', '110'),
-'--clampherosm': ImgBuilder('320', '695', '60', '110'),
-'--clampherotab': ImgBuilder('695', '1023', '37', '40'),
-'--clampimgsm': ImgBuilder('320', '695', '50', '110'),
+'--clampherosm': ImgBuilder('320', '695', '50', '70'),
+'--clampherotab': ImgBuilder('695', '1023', '60', '40'),
+'--clampherotablg': ImgBuilder('695', '1023', '40', '40'),
+'--clampimgsm': ImgBuilder('320', '695', '40', '110'),
 '--clampimg': ImgBuilder('320', '695', '75', '80'),
 '--clampdots': ImgBuilder('320', '695', '50', '65'),
-'--clampdotsm': ImgBuilder('320', '695', '30', '45'),
+'--clampdotsm': ImgBuilder('320', '695', '50', '45'),
 '--clamph0': ClampBuilder('320', '840', '2', '2.5'),
 '--clamph1': ClampBuilder('320', '840', '2', '3'),
 '--clamph2': ClampBuilder('320', '840', '1.4', '2.8'),

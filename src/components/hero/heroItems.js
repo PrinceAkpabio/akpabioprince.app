@@ -15,7 +15,6 @@ export const HeroImg = [
   class: 'hero-imgs-hero'
  },
  {
-  backgroundImage: `url(${HeroItems.dots})`,
   class: 'hero-imgs-dots'
  }
 ]

@@ -20,7 +20,8 @@ const Naviagtion = () => {
      {
       MenuItems.map((Menu, idx) => (
      <li className={`Nav-menu-items ${menu && 'active'}`} key={idx}>
-        <Link
+         <Link
+         className='menu-links'
          to={Menu.link}
          activeClass="active"
          smooth={true}

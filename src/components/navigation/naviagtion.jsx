@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import { MenuItems } from './menuItems';
+import MenuButton from '../button/menuButton';
+import MenuList, { Logo } from './menuList';
 // import Scroll from 'react-scroll';
-import { Link} from 'react-scroll';
+// import { Link} from 'react-scroll';
 
 // const ScrollLink = Scroll.Link;
 
@@ -12,30 +13,10 @@ const Naviagtion = () => {
   setMenu(prevMenu => !prevMenu)
  };
  return (
-  <div className='Nav'>
-   <span id='Nav-logo'>Akpabio Prince</span>
-
-    <div className={`Nav-menu-wrapper ${menu && 'active'}`}>
-     <ul className='Nav-menu'>
-     {
-      MenuItems.map((Menu, idx) => (
-     <li className={`Nav-menu-items ${menu && 'active'}`} key={idx}>
-         <Link
-         className='menu-links'
-         to={Menu.link}
-         activeClass="active"
-         smooth={true}
-         duration={500}
-        >{Menu.name}</Link>
-     </li>
-      ))
-     }
-     </ul>
-    </div>
-
-   <span className="Nav-mb-menu"
-   onClick={ToggleMenu}
-   > {menu ? <ion-icon name="close-outline"></ion-icon> :<ion-icon name="menu-outline"></ion-icon>} </span>
+   <div className='Nav'>
+    <Logo />
+    <MenuList menu={menu} />
+    <MenuButton ToggleMenu={ToggleMenu} menu={menu} />
    
   </div>
  )

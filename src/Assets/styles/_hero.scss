@@ -54,7 +54,7 @@
 }
 
 // Tablet
-@media (min-width: $tab-sm) {
+@media screen and (min-width: $tab-sm) {
   .hero > .hero-imgs {
     display: flex;
     flex-direction: row;

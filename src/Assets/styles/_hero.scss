@@ -69,9 +69,9 @@
 
 // mobile-sm
 @media screen and (min-width: $mobile-sm) and (min-height: 562px) {
-  // .hero {
-  //   height: var(--clampherosm);
-  // }
+  .hero {
+    height: var(--clampherosm);
+  }
   .hero-img-hero {
     height: var(--clampimgsm);
   }
@@ -100,7 +100,7 @@
 }
 
 // Tablet
-@media screen and (min-width: $tab-sm) and (min-height: 547px) {
+@media screen and (min-width: $tab-sm) and (min-height: 478px) {
   .hero {
     height: var(--clampherotab);
   }
@@ -118,15 +118,17 @@
       height: 100%;
 
       #dots {
-        top: -1%;
-        left: 7%;
+        top: 6%;
+        left: 1.5%;
+        width: 30vw;
+        height: 35%;
       }
     }
   }
 
   .hero > .hero-content {
-    bottom: 22%;
-    left: 8%;
+    bottom: 12%;
+    left: 10%;
     color: $accent;
 
     h2 {
@@ -142,5 +144,11 @@
       background-color: $sub1;
       width: 210px;
     }
+  }
+}
+
+@media screen and (min-width: $tab-sm) and (min-height: 800px) {
+  .hero {
+    height: var(--clampherotablg);
   }
 }

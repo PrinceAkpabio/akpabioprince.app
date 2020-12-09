@@ -27,3 +27,6 @@ $mobile-lg: 425px;
 @mixin transition-slow {
   transition: all 1s ease-in-out;
 }
+@mixin transition-slower {
+  transition: all 1.5s ease-in-out;
+}

@@ -3,6 +3,7 @@
 @import "./variables";
 @import "./_navigation";
 @import "./_hero";
+@import "./_bio";
 /* 
 font-family: 'Texturina', serif;
 font-family: 'Yeon Sung', cursive; 
@@ -61,8 +62,8 @@ p {
   left: 0;
   background: linear-gradient(
     180deg,
-    transparent 0%,
-    transparent 18%,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 18%,
     rgba(0, 0, 0, 0.8) 90%,
     rgba(0, 0, 0, 0.8) 100%
   );

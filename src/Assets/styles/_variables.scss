@@ -14,7 +14,10 @@ $font2: "Yeon Sung", cursive;
 
 // Responsive
 $mobile-menu: 855px;
-$tab-sm: 559px;
+$tab-sm: 695px;
+$mobile-sm: 320px;
+$mobile-md: 375px;
+$mobile-lg: 425px;
 
 // Mixins
 
@@ -23,4 +26,7 @@ $tab-sm: 559px;
 }
 @mixin transition-slow {
   transition: all 1s ease-in-out;
+}
+@mixin transition-slower {
+  transition: all 1.5s ease-in-out;
 }

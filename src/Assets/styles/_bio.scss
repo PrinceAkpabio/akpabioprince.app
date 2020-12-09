@@ -1,29 +1,69 @@
-.bio {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background-image: url("../images/DSC_0327.JPG");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // .overlay {
-  // }
-}
-.bio-content {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 10%;
+#bio-wrapper {
+  transform: translateX(0);
+  animation: SlideInLeft 1s ease-in;
+  overflow: hidden;
+  @include transition-slow;
+  @keyframes SlideInLeft {
+    0% {
+      transform: translateX(-100vw);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 
-  h2 {
-    color: $body-color;
-    z-index: 10;
-    text-align: justify;
-    max-width: 60rem;
-    font-size: 4.5vw;
-    // text-shadow: 0.5px 0.5px 0 $body-color;
+  .bio {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/DSC_0327.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // .overlay {
+    // }
+  }
+  .bio-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+    background-color: $sub2;
+    overflow: hidden;
+    // color: $body-color;
+
+    h4 {
+      margin: 0 -25px -17px 0;
+    }
+    h1 {
+      position: relative;
+      &::after {
+        @include coloredBorders(34vmin, 3.5vmin, 60%, -3%, $sub1-filtered);
+      }
+    }
+    p {
+      color: $body-color;
+      z-index: 10;
+      text-align: justify;
+      max-width: 60rem;
+      // font-size: 4.5vw;
+    }
+  }
+
+  #waves {
+    position: absolute;
+    height: 120px;
+    width: 100px;
+    bottom: 2%;
+    right: 3%;
+    color: $sub1;
+    z-index: 1;
+    font-weight: bolder;
   }
 }

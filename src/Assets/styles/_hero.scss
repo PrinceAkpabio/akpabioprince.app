@@ -27,6 +27,19 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-color: $primary;
+      overflow-y: hidden;
+
+      // #dots-inactive {
+      //   position: absolute;
+      //   width: 30vw;
+      //   height: 50%;
+      //   background-position: bottom;
+      //   background-repeat: no-repeat;
+      //   color: $sub1;
+      //   background-size: contain;
+      //   // transform: translateX(350%);
+      //   @include transition-slow;
+      // }
 
       #dots {
         position: absolute;
@@ -38,6 +51,19 @@
         background-repeat: no-repeat;
         color: $sub1;
         background-size: contain;
+        animation: slideIn 1.5s;
+        @include transition-slow;
+
+        @keyframes slideIn {
+          0% {
+            bottom: 1%;
+            right: -40%;
+          }
+          100% {
+            bottom: 1%;
+            right: 4%;
+          }
+        }
       }
     }
   }
@@ -50,6 +76,20 @@
     bottom: 5%;
     left: 5%;
     color: $accent;
+    animation: fadeIn 1.5s;
+    @include transition-slower;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
 
     h2 {
       margin: 0 0 -0.7rem;
@@ -59,10 +99,53 @@
       margin: 0 0 0.7rem;
       padding: 0;
     }
-    h3 {
+    #jd {
+      position: relative;
       padding: 0.3rem;
       background-color: $sub1;
       width: 210px;
+      animation: flipCard 2s ease-out 1.4s;
+
+      &::before {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        animation: rmBk 5.4s ease-in;
+      }
+
+      @keyframes rmBk {
+        0% {
+          background-color: $sub1;
+        }
+        25% {
+          background-color: $sub1;
+        }
+        50% {
+          background-color: transparent;
+        }
+        100% {
+          background-color: transparent;
+        }
+      }
+
+      @keyframes flipCard {
+        0% {
+          transform: rotateX(200deg);
+        }
+        25% {
+          transform: rotateX(100deg);
+        }
+        50% {
+          transform: rotateX(50deg);
+        }
+        100% {
+          transform: rotateX(0deg);
+        }
+      }
     }
   }
 }
@@ -89,8 +172,8 @@
       position: absolute;
       width: 30vw;
       height: 50%;
-      bottom: 1%;
-      right: 4%;
+      // bottom: 1%;
+      // right: 4%;
       background-position: bottom;
       background-repeat: no-repeat;
       color: $sub1;

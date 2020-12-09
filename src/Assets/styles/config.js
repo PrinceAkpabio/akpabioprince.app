@@ -27,7 +27,7 @@ export function ImgBuilder( minWidthPx, maxWidthPx, minFontSize, maxFontSize ) {
 
 export const TextStyle = {
 '--clamphero': ImgBuilder('320', '695', '80', '110'),
-'--clampherosm': ImgBuilder('320', '695', '50', '70'),
+'--clampherosm': ImgBuilder('320', '695', '60', '80'),
 '--clampherotab': ImgBuilder('695', '1023', '60', '40'),
 '--clampherotablg': ImgBuilder('695', '1023', '40', '40'),
 '--clampimgsm': ImgBuilder('320', '695', '40', '110'),

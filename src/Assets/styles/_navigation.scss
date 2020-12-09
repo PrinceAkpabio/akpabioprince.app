@@ -56,6 +56,7 @@
 @media screen and (max-width: $mobile-menu) {
   .Nav {
     position: relative;
+    height: 3rem;
     .Nav-menu-wrapper {
       position: absolute;
       display: grid;

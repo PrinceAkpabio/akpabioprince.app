@@ -1,42 +1,54 @@
 #bio-wrapper {
-  transform: translateX(0);
-  animation: SlideInLeft 1s ease-in;
-  overflow: hidden;
-  @include transition-slow;
-  @keyframes SlideInLeft {
-    0% {
-      transform: translateX(-100vw);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
+  display: flex;
+  justify-content: center;
+  padding: 0 3em;
 
-  .bio {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-image: url("../images/DSC_0327.JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // .overlay {
-    // }
-  }
+  overflow: hidden;
+
   .bio-content {
     display: flex;
     flex-direction: column;
     position: absolute;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0 10%;
-    background-color: $sub2;
+    justify-self: center;
+    max-width: 80%;
+    min-width: 200px;
+    max-height: 50rem;
+    padding: 0 6%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1em;
+    z-index: 1;
+    backdrop-filter: blur(70px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
     overflow: hidden;
-    // color: $body-color;
+    transform: translateY(50vw);
+
+    &.active {
+      transform: translateY(0);
+
+      animation: SlideInLeft 1.5s ease-in;
+      @include transition-slow;
+      @keyframes SlideInLeft {
+        0% {
+          transform: translateY(100vw);
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 0.3;
+        }
+        95% {
+          opacity: 0.4;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
 
     h4 {
       margin: 0 -25px -17px 0;
@@ -63,7 +75,7 @@
     bottom: 2%;
     right: 3%;
     color: $sub1;
-    z-index: 1;
+    z-index: -1;
     font-weight: bolder;
   }
 }

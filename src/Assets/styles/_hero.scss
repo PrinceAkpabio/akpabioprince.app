@@ -11,10 +11,11 @@
 
     & > .hero-imgs-hero {
       margin-top: 0;
-      background-image: url("../images/header.jpg");
+      background: url("../images/header.jpg");
       background-position: top;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
+      border-radius: 15px;
       width: 100%;
       height: var(--clampimg);
     }
@@ -39,6 +40,7 @@
         background-repeat: no-repeat;
         color: $sub1;
         background-size: contain;
+        z-index: 1;
         animation: slideIn 1.5s;
         @include transition-slow;
 
@@ -64,6 +66,7 @@
     bottom: 5%;
     left: 5%;
     color: $accent;
+    z-index: 1;
     animation: fadeIn 1.5s;
     @include transition-slower;
 

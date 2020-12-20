@@ -1,7 +1,6 @@
 import React from 'react';
 import Bio from '../components/bio/Bio';
 import Hero from '../components/hero/hero';
-import Naviagtion from '../components/navigation/naviagtion';
 import { ParallaxScroll } from '../components/customHooks/parallaxScroll';
 import star from '../Assets/images/star.svg'
 import moon from '../Assets/images/moon.svg'
@@ -32,9 +31,8 @@ return (
             '--offset1': `${offset * 0.08}px`    
         }}
         ></ion-icon>
-        <div className="container">
-
-            <Naviagtion />
+        <div className="container"
+        >
             <Hero />
             <Bio />
         </div>

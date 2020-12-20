@@ -1,228 +1,223 @@
 .hero {
-  height: var(--clamphero);
+  // height: 90vh;
+  height: auto;
   position: relative;
+  padding: 2rem;
+
+  &.container {
+    margin-bottom: 3rem;
+  }
+
+  // Mobile
   .hero-imgs {
     display: flex;
+    position: relative;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100%;
-
-    // Mobile
+    height: 25rem;
 
     & > .hero-imgs-hero {
-      margin-top: 0;
+      margin: 0;
       background: url("../images/header.jpg");
       background-position: top;
       background-repeat: no-repeat;
       background-size: contain;
-      border-radius: 15px;
+      height: 90%;
       width: 100%;
-      height: var(--clampimg);
-    }
-    .hero-imgs-dots {
-      position: relative;
-      margin-top: 0;
-      width: 100%;
-      height: var(--clampdots);
-      background-position: bottom;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-color: $primary;
-      overflow: hidden;
-
-      #dots {
-        position: absolute;
-        width: 30vw;
-        height: 50%;
-        bottom: 1%;
-        right: 4%;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        color: $sub1;
-        background-size: contain;
-        z-index: 1;
-        animation: slideIn 1.5s;
-        @include transition-slow;
-
-        @keyframes slideIn {
-          0% {
-            bottom: 1%;
-            right: -40%;
-          }
-          100% {
-            bottom: 1%;
-            right: 4%;
-          }
-        }
-      }
+      z-index: 2;
     }
   }
 
-  .hero-content {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-    bottom: 5%;
-    left: 5%;
-    color: $accent;
-    z-index: 1;
-    animation: fadeIn 1.5s;
-    @include transition-slower;
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 0.5;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    h2 {
-      margin: 0 0 -0.7rem;
-      padding: 0;
-    }
-    h1 {
-      margin: 0 0 0.7rem;
-      padding: 0;
-    }
-    #jd {
-      position: relative;
-      padding: 0.3rem;
-      background-color: $sub1;
-      width: 210px;
-      animation: flipCard 2s ease-out 1.4s;
-
-      &::before {
-        z-index: 1;
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        animation: rmBk 5.4s ease-in;
-      }
-
-      @keyframes rmBk {
-        0% {
-          background-color: $sub1;
-        }
-        25% {
-          background-color: $sub1;
-        }
-        50% {
-          background-color: transparent;
-        }
-        100% {
-          background-color: transparent;
-        }
-      }
-
-      @keyframes flipCard {
-        0% {
-          transform: rotateX(200deg);
-        }
-        25% {
-          transform: rotateX(100deg);
-        }
-        50% {
-          transform: rotateX(50deg);
-        }
-        100% {
-          transform: rotateX(0deg);
-        }
-      }
-    }
-  }
-}
-
-// mobile-sm
-@media screen and (min-width: $mobile-sm) and (min-height: 562px) {
-  .hero {
-    height: var(--clampherosm);
-  }
-  .hero-img-hero {
-    height: var(--clampimgsm);
-  }
-  .hero > .hero-imgs > .hero-imgs-dots {
-    position: relative;
-    margin-top: 0;
-    width: 100%;
-    height: var(--clampdotsm);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: $primary;
-
+  & > .hero-imgs-content {
     #dots {
       position: absolute;
       width: 30vw;
-      height: 50%;
-      // bottom: 1%;
-      // right: 4%;
+      height: 7rem;
+      bottom: 0%;
+      right: 4%;
       background-position: bottom;
       background-repeat: no-repeat;
       color: $sub1;
       background-size: contain;
+      z-index: 1;
+      animation: slideIn 1.5s;
+      @include transition-slow;
+
+      @keyframes slideIn {
+        0% {
+          bottom: 1%;
+          right: -40%;
+        }
+        100% {
+          bottom: 1%;
+          right: 4%;
+        }
+      }
     }
+
+    .hero-content {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      bottom: 2%;
+      left: 5%;
+      color: $accent;
+      z-index: 2;
+      animation: fadeIn 1.5s;
+      @include transition-slower;
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      h2 {
+        margin: 0 0 -0.7rem;
+        padding: 0;
+      }
+      h1 {
+        margin: 0 0 0.7rem;
+        padding: 0;
+      }
+      #jd {
+        position: relative;
+        padding: 0.3rem;
+        background-color: $sub1;
+        width: 210px;
+        animation: flipCard 2s ease-out 1.4s;
+
+        &::before {
+          z-index: 1;
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          animation: rmBk 5.4s ease-in;
+        }
+
+        @keyframes rmBk {
+          0% {
+            background-color: $sub1;
+          }
+          25% {
+            background-color: $sub1;
+          }
+          50% {
+            background-color: transparent;
+          }
+          100% {
+            background-color: transparent;
+          }
+        }
+
+        @keyframes flipCard {
+          0% {
+            transform: rotateX(200deg);
+          }
+          25% {
+            transform: rotateX(100deg);
+          }
+          50% {
+            transform: rotateX(50deg);
+          }
+          100% {
+            transform: rotateX(0deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+// mobile-lg
+@media screen and (min-width: 400px) and (min-height: 300px) {
+  .hero {
+    // height: 90vh;
+    // margin-bottom: 10rem;
+
+    .hero-imgs-content {
+      margin-bottom: 7rem;
+      #dots {
+        bottom: -4%;
+      }
+      .hero-content {
+        bottom: 5%;
+        border-radius: 15px;
+        h1,
+        h2 {
+          box-shadow: 0px -13px 19px -30px rgba(0, 0, 0, 0.81) inset;
+        }
+      }
+    }
+    // .hero-imgs > .hero-imgs-hero {
+    // }
   }
 }
 
 // Tablet
-@media screen and (min-width: $tab-sm) and (min-height: 478px) {
+@media screen and (min-width: $tab-sm) {
   .hero {
-    height: var(--clampherotab);
-  }
-  .hero > .hero-imgs {
-    flex-direction: row;
-    .hero-imgs-hero {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    width: 100%;
+
+    .hero-imgs {
       order: 1;
-      width: 60%;
-      height: 100%;
+      margin: 0;
+
+      .hero-imgs-hero {
+        align-self: flex-end;
+        border-radius: 10%;
+      }
     }
-    .hero-imgs-dots {
-      order: 0;
-      background-color: $primary;
-      width: 40%;
+    .hero-imgs-content {
       height: 100%;
+      order: 0;
 
       #dots {
-        top: 6%;
+        top: 10%;
         left: 1.5%;
-        width: 30vw;
-        height: 35%;
+        width: 25vw;
+        height: 30%;
+      }
+
+      .hero-content {
+        bottom: 22%;
+        left: 10%;
+        color: $accent;
+
+        h2 {
+          margin: 0 0 -0.7rem;
+          padding: 0;
+        }
+        h1 {
+          margin: 0 0 0.7rem;
+          padding: 0;
+        }
+        h3 {
+          padding: 0.3rem;
+          background-color: $sub1;
+          width: 210px;
+        }
       }
     }
   }
-
-  .hero > .hero-content {
-    bottom: 12%;
-    left: 10%;
-    color: $accent;
-
-    h2 {
-      margin: 0 0 -0.7rem;
-      padding: 0;
-    }
-    h1 {
-      margin: 0 0 0.7rem;
-      padding: 0;
-    }
-    h3 {
-      padding: 0.3rem;
-      background-color: $sub1;
-      width: 210px;
-    }
-  }
 }
 
-@media screen and (min-width: $tab-sm) and (min-height: 800px) {
-  .hero {
-    height: var(--clampherotablg);
-  }
-}
+// @media screen and (min-width: $tab-sm) and (min-height: 800px) {
+//   .hero {
+//     // height: var(--clampherotablg);
+//   }
+// }

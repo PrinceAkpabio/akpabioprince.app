@@ -1,0 +1,30 @@
+.Parallax {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  // & > .container {
+  // }
+  & > .star {
+    position: fixed;
+    top: 50vh;
+    left: 15vw;
+    transform: translateY(var(--offset));
+    z-index: 1;
+  }
+  & > .moon {
+    position: fixed;
+    font-size: 4rem;
+    top: 30vh;
+    right: 15vw;
+    transform: translateY(var(--offset));
+    z-index: 1;
+  }
+  & > .gear {
+    position: fixed;
+    bottom: 5vh;
+    right: 1vw;
+    font-size: 2rem;
+    transform: translateY(var(--offset1)) rotate(var(--offset));
+    z-index: 1;
+  }
+}

@@ -1,11 +1,13 @@
 // Color scheme:
-$primary: #583d72;
-$accent: #ff8e71;
-$sub1: #9f5f80;
-$sub2: #ffba93;
+$primary: #02021e;
+$accent: #ffae9a;
+$sub1: #262147;
+$sub2: #0a0c2d;
 $text-link: #2997ff;
 $text-color: #f0f0f0;
 $body-color: #ffff;
+$sub1-filtered: rgba(255, 174, 154, 0.7);
+$glass: #ccccd2;
 
 // Font Family
 
@@ -29,4 +31,15 @@ $mobile-lg: 425px;
 }
 @mixin transition-slower {
   transition: all 1.5s ease-in-out;
+}
+@mixin coloredBorders($width, $height, $top, $left, $bkcolor) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  top: $top;
+  left: $left;
+  opacity: 0.98;
+  background-color: $bkcolor;
+  box-sizing: border-box;
 }

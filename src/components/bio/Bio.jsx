@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BioContent } from './bioItems';
+import waves from '../../Assets/images/waves.svg';
 import { AnimateOnScroll } from '../customHooks/scrollAnimate';
 
 const Bio = () => {
@@ -8,12 +10,14 @@ const Bio = () => {
  // const [state3, ref3]  = AnimateOnScroll()
  return (
 
-    <Div animate={state1} ref={ref1}>
-    <div className="bio">
-    <div className="overlay"></div>
-   </div> 
-    <div className="bio-content">
-     <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam quam eveniet ipsam rem dolorum impedit repellendus molestias explicabo consequuntur alias, saepe expedita, ducimus accusamus vitae quod nemo dicta voluptatem neque dolorem. Dolores dolor nobis doloribus veritatis ea architecto ad praesentium ipsum, natus ut odio reiciendis, libero earum quos in iusto?</h2></div>
+    <Div id='bio-wrapper' ref={ref1}>
+    
+     <div className={`bio-content ${state1 && 'active'}`} >
+       <h4>{BioContent.title1}</h4>
+       <h1>{BioContent.title2}</h1>
+       <p>{BioContent.bio}</p>
+     </div>
+     <ion-icon id='waves' src={waves}></ion-icon>
     </Div>
   );
 };
@@ -21,10 +25,8 @@ const Bio = () => {
 const Div = styled.div`
   position: relative;
   display: flex;
-  height: 100vw;
+  height: 200vw;
   width: 100%;
-  transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
-  transition: transform 1s;
 `;
 
 

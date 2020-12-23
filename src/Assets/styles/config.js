@@ -39,7 +39,7 @@ export const TextStyle = {
 '--clamph2': ClampBuilder('320', '840', '1.4', '2.8'),
 '--clamph3': ClampBuilder('320', '840', '1.2', '2.3'),
 '--clamph4': ClampBuilder('320', '840', '1', '2'),
-'--clampP': ClampBuilder('320', '840', '0.94', '1.5')
+'--clampP': ClampBuilder('320', '840', '1.5', '1.7')
 }
 
 

@@ -5,6 +5,7 @@ import { ParallaxScroll } from '../components/customHooks/parallaxScroll';
 import star from '../Assets/images/star.svg'
 import moon from '../Assets/images/moon.svg'
 import gear from '../Assets/images/gear.svg'
+    
 
 
 

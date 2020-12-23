@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Texturina:wght@200&family=Yeon+Sung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Texturina:wght@200&display=swap");
 
 @import "./variables";
 @import "./_navigation";
@@ -33,7 +33,7 @@ p {
   font-family: $font2;
 }
 h1 {
-  font-size: var(--clamph1);
+  font-size: 2.5rem;
 }
 h2 {
   font-size: var(--clamph2);
@@ -44,9 +44,9 @@ h3 {
 h4,
 p {
   font-weight: weight(regular);
-  line-height: 1.5;
+  line-height: 1.8;
   letter-spacing: 0.1rem;
-  font-size: var(--clampP);
+  font-size: 1.2rem;
 }
 .container {
   max-width: 75rem;

@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 2.5rem;
-  background: linear-gradient(to right, $primary 40%, $sub1 40%, $sub1 100%);
+  background: transparent;
 
   #Nav-logo {
     display: flex;
@@ -67,7 +67,7 @@
       left: -100vw;
       width: 40%;
       height: calc(100vh - 2.55rem);
-      background-color: $primary;
+      background-color: $sub2;
       @include transition-slow;
 
       &.active {
@@ -97,6 +97,7 @@
 
       ion-icon {
         font-size: 2.1rem;
+        color: $glass;
         @include transition-ease;
         &:hover {
           color: $accent;

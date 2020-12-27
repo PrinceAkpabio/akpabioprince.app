@@ -10,7 +10,7 @@ const Bio = () => {
  // const [state3, ref3]  = AnimateOnScroll()
  return (
 
-    <div className='bio-wrapper container' ref={ref1}>
+    <div className='bio-wrapper' ref={ref1}>
     
      <div className={`bio-content ${state1 && 'active'}`} >
        <h4>{BioContent.title1}</h4>

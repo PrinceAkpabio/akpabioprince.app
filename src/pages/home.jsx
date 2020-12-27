@@ -35,9 +35,6 @@ return (
         }}
         ></ion-icon> 
         <div className="container"
-            style={{
-                height: '100%'
-            }}
         >
             <Hero />
             <Bio />

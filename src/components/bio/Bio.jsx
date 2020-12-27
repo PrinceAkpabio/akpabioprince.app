@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { BioContent } from './bioItems';
 import waves from '../../Assets/images/waves.svg';
 import { AnimateOnScroll } from '../customHooks/scrollAnimate';

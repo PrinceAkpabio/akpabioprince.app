@@ -10,7 +10,7 @@ const Bio = () => {
  // const [state3, ref3]  = AnimateOnScroll()
  return (
 
-    <Div id='bio-wrapper' ref={ref1}>
+    <div className='bio-wrapper container' ref={ref1}>
     
      <div className={`bio-content ${state1 && 'active'}`} >
        <h4>{BioContent.title1}</h4>
@@ -18,16 +18,16 @@ const Bio = () => {
        <p>{BioContent.bio}</p>
      </div>
      <ion-icon id='waves' src={waves}></ion-icon>
-    </Div>
+    </div>
   );
 };
 
-const Div = styled.div`
-  position: relative;
-  display: flex;
-  height: 200vw;
-  width: 100%;
-`;
+// const Div = styled.div`
+//   position: relative;
+//   display: flex;
+//   height: 100%;
+//   width: 100%;
+// `;
 
 
 export default Bio;

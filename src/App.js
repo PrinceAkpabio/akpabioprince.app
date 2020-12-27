@@ -7,7 +7,9 @@ import HomePage from './pages/home';
 function App() {
   return (
     <div className="App"
-      style={TextStyle}>
+      style={TextStyle}
+    
+    >
       <Naviagtion />
       <HomePage />
     </div>

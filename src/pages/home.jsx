@@ -6,6 +6,7 @@ import star from '../Assets/images/star.svg'
 import moon from '../Assets/images/moon.svg'
 import gear from '../Assets/images/gear.svg'
 import Tools from '../components/tools/tools';
+import Projects from '../components/projects/projects';
     
 
 
@@ -39,6 +40,7 @@ return (
             <Hero />
             <Bio />
             <Tools />
+            <Projects />
         </div>
         
  </div>

@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Texturina:wght@200&family=Yeon+Sung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Texturina:wght@200&display=swap");
 
 @import "./variables";
 @import "./_navigation";
 @import "./_hero";
 @import "./_bio";
+@import "./_homepage";
+@import "./_tools";
 /* 
 font-family: 'Texturina', serif;
 font-family: 'Yeon Sung', cursive; 
@@ -17,9 +19,10 @@ font-family: 'Dancing Script', cursive;
 
 html,
 body {
-  background-color: $body-color;
+  background-color: $primary;
   position: relative;
   overflow-x: hidden;
+  color: $text-color;
 }
 
 h1,
@@ -32,7 +35,7 @@ p {
   font-family: $font2;
 }
 h1 {
-  font-size: var(--clamph1);
+  font-size: 2.5rem;
 }
 h2 {
   font-size: var(--clamph2);
@@ -43,12 +46,12 @@ h3 {
 h4,
 p {
   font-weight: weight(regular);
-  line-height: 1.5;
+  line-height: 1.8;
   letter-spacing: 0.1rem;
-  font-size: var(--clampP);
+  font-size: 1.2rem;
 }
 .container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
 }
 .row {
@@ -62,11 +65,11 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(250, 189, 153, 0.644) 0%,
-    rgba(255, 186, 147, 0.5) 18%,
-    rgba(159, 95, 128, 0.6) 90%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(250, 189, 153, 0.644) 0%,
+  //   rgba(255, 186, 147, 0.5) 18%,
+  //   rgba(159, 95, 128, 0.6) 90%,
+  //   rgba(0, 0, 0, 0.8) 100%
+  // );
 }

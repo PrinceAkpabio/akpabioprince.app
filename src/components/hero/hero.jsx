@@ -8,15 +8,16 @@ function Hero() {
   <div className='hero container'>
      <div className="hero-imgs">
        <div className="hero-imgs-hero"></div>
-       <div className="hero-imgs-dots">
+       </div>
+       <div className="hero-imgs-content">
+          <span className="hero-content">
+            <h2>{HeroItems.intro}</h2>
+            <h1>{HeroItems.name}</h1>
+            <h3 id='jd'>{HeroItems.jd1}</h3>
+          </span>
         <ion-icon id='dots' src={dots}> </ion-icon>
        </div>
-       </div>
-   <span className="hero-content">
-    <h2>{HeroItems.intro}</h2>
-    <h1>{HeroItems.name}</h1>
-    <h3 id='jd'>{HeroItems.jd1}</h3>
-   </span>
+   
    
   </div>
  )

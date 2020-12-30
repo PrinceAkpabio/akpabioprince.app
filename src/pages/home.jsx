@@ -7,6 +7,7 @@ import moon from '../Assets/images/moon.svg'
 import gear from '../Assets/images/gear.svg'
 import Tools from '../components/tools/tools';
 import Projects from '../components/projects/projects';
+import Carousel from '../components/testimonies/carousel/carousell';
     
 
 
@@ -41,6 +42,7 @@ return (
             <Bio />
             <Tools />
             <Projects />
+            <Carousel />
         </div>
         
  </div>

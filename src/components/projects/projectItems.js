@@ -42,7 +42,7 @@ export const ProjectItems = [
   )`
   ,
   overlayText: 'Doula brand for passionate and aspiring birthworkers',
-  pjLink: 'https://doulastartup.netlify.app/',
+  pjLink:` https://doulastartup.netlify.app/`,
  },
  {
   id: '4',

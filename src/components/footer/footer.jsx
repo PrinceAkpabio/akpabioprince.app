@@ -7,24 +7,24 @@ import github from '../../Assets/images/github.svg'
 import mail from '../../Assets/images/email.svg'
 const Footer = () => {
 
- const icons = [
+ const Icons = [
   {
-   id: 1,
+   Id: '1',
    si: twitter,
    link: 'https://twitter.com/princeakpabio_'
   },
   {
-   id: 2,
+   id: '2',
    si: linkedin,
    link: 'https://www.linkedin.com/in/princeakpabio/'
   },
   {
-   id: 3,
+   id: '3',
    si: github,
    link: 'https://github.com/PrinceAkpabio'
   },
   {
-   id: 4,
+   id: '4',
    si: mail,
    link: 'mailto:princeakpabio90@gmail.com'
   },
@@ -44,29 +44,35 @@ const Footer = () => {
    </div>
 
    <div className="footer-parallax">
-    <span
+    <Link
+    to='/'
+    >
+     <span
      style={{
       backgroundImage: `url(${logo})`
      }}
      className="footer-logo"
     >
     </span>
+    </Link>
     <h2
      className='footer-tagLine'>
      Living, learning, & leveling up one day at a time.</h2>
     <span className='footer-icons'>
     {
      
-      icons.map(item => (
+      Icons.map(item => (
        <Link
+        key={item.id}
+        
        to={{
         pathname: item.link
-       }}
+        }}
+        
         target='_blank'
         className='footer-links'
        >
        <ion-icon
-        key={item.id}
         id='footer-socialIcons'
         src={item.si}>
        </ion-icon>

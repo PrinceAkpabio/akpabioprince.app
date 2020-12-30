@@ -2,36 +2,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2.5rem;
-  background: linear-gradient(to right, black 30%, $sub1 30%, $sub1 100%);
+  height: 5rem;
+  background: transparent;
 
   #Nav-logo {
     display: flex;
     justify-content: center;
     color: $accent;
     width: 30%;
+    height: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 30;
   }
 
   &-menu-wrapper {
     display: flex;
-    width: 70%;
+    width: 60%;
     justify-content: center;
     .Nav-menu {
       display: flex;
       list-style: none;
 
-      &-items {
+      .Nav-menu-items {
         padding-right: 0.8rem;
         cursor: pointer;
         color: $text-color;
+        text-transform: uppercase;
 
         &:nth-child(5) {
           padding-right: 0;
         }
 
+        &:hover {
+          color: $sub1;
+        }
+
         .active {
           padding-bottom: 0.4rem;
           border: 1px solid $accent;
+        }
+
+        .menu-links {
+          font-size: var(--clamph2);
         }
       }
     }
@@ -43,7 +57,72 @@
 }
 
 @media screen and (max-width: $mobile-menu) {
-  .Nav-mb-menu {
-    display: flex;
+  .Nav {
+    position: relative;
+    height: 3rem;
+
+    #Nav-logo {
+      width: 37%;
+      margin-top: 1rem;
+    }
+    .Nav-menu-wrapper {
+      position: absolute;
+      display: grid;
+      align-items: center;
+      z-index: 10;
+      top: 0;
+      margin: 0;
+      left: -100vw;
+      width: 40%;
+      height: calc(100vh);
+      background-color: $sub2;
+      @include transition-slow;
+
+      &.active {
+        left: 0;
+        z-index: 10;
+        @include transition-slow;
+      }
+      .Nav-menu {
+        display: grid;
+        justify-items: center;
+
+        & > .Nav-menu-items {
+          width: 100%;
+          padding: 1.5rem 0;
+          margin: 0.5rem 0;
+          transform: translateX(-100vw);
+          @include transition-ease;
+          &.active {
+            transform: translateX(0vw);
+          }
+          .menu-links {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    .Nav-mb-menu {
+      display: flex;
+      padding-right: 2rem;
+      margin-top: 1rem;
+
+      @include transition-slow;
+
+      ion-icon {
+        font-size: 2.1rem;
+        color: $glass;
+        @include transition-ease;
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 to 6 {
+  .Nav-menu > .Nav-menu-items.active:nth-child(#{$i}) {
+    transition-delay: ($i * 0.3s) + 0.15s;
   }
 }

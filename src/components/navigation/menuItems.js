@@ -1,3 +1,5 @@
+import logo from '../../Assets/images/akpabioprincelogo.webp';
+
 export const MenuItems = [
  {
   link: 'home',
@@ -25,3 +27,7 @@ export const MenuItems = [
   className: '#'
  }
 ]
+
+export const LogoItem = {
+ logo: logo
+}

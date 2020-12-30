@@ -10,7 +10,7 @@ function Projects() {
     <p>Here are a few design projects I've worked on recently. Want to see more?
      <Link
       id='email'
-      to={{ pathname: 'princeakpabio90@gmail.com' }} target="_blank">
+      to={{ pathname: 'mailto:princeakpabio90@gmail.com' }} target="_blank">
       Email me.
       </Link>
     </p>

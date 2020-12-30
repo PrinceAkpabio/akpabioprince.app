@@ -21,7 +21,9 @@ function Projects() {
       <div
        className="project"
        key={items.id}
-       style={{
+     >
+      <div className="project-container"
+      style={{
         backgroundImage: `url(${items.pjImg})`,
         '--gradient': items.overlayColor
       }}
@@ -32,13 +34,15 @@ function Projects() {
          backgroundImage: `url(${items.pjLogo})` ,
         }}
         />
+       </div>
        <span
         className="overlay">
         <p
          id='overlay-text'>
          {items.overlayText}
         </p>
-       <Link
+        <Link
+         className="overlayLink"
          id='overlayLink'
          to={{ pathname: items.pjLink }}
          target="_blank"

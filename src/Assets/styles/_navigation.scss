@@ -2,16 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2.5rem;
+  height: 5rem;
   background: transparent;
 
   #Nav-logo {
     display: flex;
     justify-content: center;
     color: $accent;
-    width: 40%;
-    font-family: $font1;
-    font-size: var(--clamph2);
+    width: 30%;
+    height: 6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 30;
   }
 
   &-menu-wrapper {
@@ -57,16 +60,21 @@
   .Nav {
     position: relative;
     height: 3rem;
+
+    #Nav-logo {
+      width: 37%;
+      margin-top: 1rem;
+    }
     .Nav-menu-wrapper {
       position: absolute;
       display: grid;
       align-items: center;
       z-index: 10;
-      top: 2.5rem;
+      top: 0;
       margin: 0;
       left: -100vw;
       width: 40%;
-      height: calc(100vh - 2.55rem);
+      height: calc(100vh);
       background-color: $sub2;
       @include transition-slow;
 
@@ -82,10 +90,14 @@
         & > .Nav-menu-items {
           width: 100%;
           padding: 1.5rem 0;
+          margin: 0.5rem 0;
           transform: translateX(-100vw);
           @include transition-ease;
           &.active {
             transform: translateX(0vw);
+          }
+          .menu-links {
+            font-size: 1.5rem;
           }
         }
       }
@@ -93,6 +105,8 @@
     .Nav-mb-menu {
       display: flex;
       padding-right: 2rem;
+      margin-top: 1rem;
+
       @include transition-slow;
 
       ion-icon {

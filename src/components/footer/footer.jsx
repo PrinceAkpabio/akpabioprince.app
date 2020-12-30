@@ -45,6 +45,7 @@ const Footer = () => {
 
    <div className="footer-parallax">
     <Link
+     className='footer-logoLink'
     to='/'
     >
      <span

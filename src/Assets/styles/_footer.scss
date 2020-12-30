@@ -48,15 +48,20 @@
     right: 0;
     z-index: 1;
 
-    .footer-logo {
+    .footer-logoLink {
       display: flex;
       justify-content: center;
       color: $accent;
       width: 40%;
       height: 9rem;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+
+      .footer-logo {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
     h2 {
       font-size: 1.7rem;

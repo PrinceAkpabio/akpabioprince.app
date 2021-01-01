@@ -1,0 +1,153 @@
+.projects {
+  padding: 0 1.5rem;
+  text-align: center;
+  align-content: space-between;
+  width: 100%;
+  height: auto;
+
+  & > &-intro {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    #email {
+      cursor: pointer;
+      margin-left: 0.3rem;
+    }
+  }
+
+  & > &-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    height: auto;
+    padding: 4rem 1rem 1rem;
+
+    @media screen and (min-width: 695px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: 1025px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .project {
+      position: relative;
+      display: flex;
+      height: 25rem;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: hover 1s ease-in 0.5s;
+
+      .project-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        transition: all 1s ease;
+
+        &::after {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          border-radius: 10px;
+          background: var(--gradient);
+          opacity: 0.55;
+        }
+
+        & > #projectLogo {
+          height: 10rem;
+          width: 12rem;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          object-fit: contain;
+          z-index: 4;
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        display: flex;
+        opacity: 0;
+        background: $sub1;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+
+        & > #overlayLink {
+          margin-top: 1rem;
+          padding: 1rem;
+          border: 1px solid $accent;
+          border-radius: 30px;
+          color: inherit;
+          cursor: pointer;
+          font-size: 1.19rem;
+          z-index: 29;
+
+          &:hover {
+            background-color: $accent;
+            color: $primary;
+          }
+        }
+      }
+      &:hover .overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 1s ease 0.3s;
+      }
+
+      .overlay:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.project:hover {
+  .project-container {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in;
+
+    #projectLogo {
+      animation: scale 1s ease;
+
+      @keyframes scale {
+        0% {
+          transform: scale(1.02);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        97% {
+          transform: scale(1.05);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1.05);
+          opacity: 0;
+        }
+      }
+    }
+
+    // .overlay {
+    //   transition: all;
+    // }
+  }
+}

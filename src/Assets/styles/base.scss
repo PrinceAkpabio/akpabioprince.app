@@ -6,6 +6,9 @@
 @import "./_bio";
 @import "./_homepage";
 @import "./_tools";
+@import "./_projects";
+@import "./_carousell";
+@import "./_footer";
 /* 
 font-family: 'Texturina', serif;
 font-family: 'Yeon Sung', cursive; 
@@ -49,6 +52,10 @@ p {
   line-height: 1.8;
   letter-spacing: 0.1rem;
   font-size: 1.2rem;
+}
+a {
+  text-decoration: none;
+  color: $accent;
 }
 .container {
   max-width: 75rem;

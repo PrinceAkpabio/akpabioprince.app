@@ -1,9 +1,21 @@
 import React from 'react'
-import { MenuItems } from './menuItems';
+import { MenuItems, LogoItem } from './menuItems';
 import { Link } from 'react-scroll';
+import { Link as NavLink } from "react-router-dom";
 
 export const Logo = () =>(
-   <span id='Nav-logo'>Akpabio Prince</span>
+   
+   <NavLink
+   id='Nav-logo'
+   to='/'
+   >
+   <span
+      style={{
+         backgroundImage: `url(${LogoItem.logo})`
+      }}
+      id='Nav-logo1'>
+      </span>
+   </NavLink>
 )
 
 export default function MenuList({menu}) {

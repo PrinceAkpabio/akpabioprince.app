@@ -6,7 +6,7 @@
   padding: 0 1.5rem;
   height: auto;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 
   // overflow: hidden;
 
@@ -29,6 +29,7 @@
     box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
     overflow: hidden;
     transform: translateY(50vw);
+    opacity: 0;
 
     p {
       margin: 1rem 1.5rem;
@@ -36,6 +37,7 @@
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
 
       animation: SlideInLeft 1.5s ease-in;
       @include transition-slow;

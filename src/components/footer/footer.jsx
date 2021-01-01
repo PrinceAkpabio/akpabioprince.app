@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Element } from 'react-scroll';
 import logo from '../../Assets/images/akpabioprincelogo.webp';
 import twitter from '../../Assets/images/twitter.svg'
 import linkedin from '../../Assets/images/linkedin.svg'
@@ -30,7 +31,11 @@ const Footer = () => {
   },
  ]
  return (
-  <div className='footer'>
+   <div className='footer'>
+     <Element
+       id='contact-component'
+       name='contact-component'
+     />
    <div className="footer-fixed">
     <h1>Start a project</h1>
     <p>Interested in working together? We should queue up a chat. I’ll buy the coffee.</p>

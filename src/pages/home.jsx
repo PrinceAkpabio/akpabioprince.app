@@ -2,6 +2,7 @@ import React from 'react';
 import Bio from '../components/bio/Bio';
 import Hero from '../components/hero/hero';
 import { ParallaxScroll } from '../components/customHooks/parallaxScroll';
+import { Element } from 'react-scroll';
 import star from '../Assets/images/star.svg'
 import moon from '../Assets/images/moon.svg'
 import gear from '../Assets/images/gear.svg'
@@ -42,6 +43,10 @@ return (
             <Bio />
             <Tools />
             <Projects />
+             <Element
+       id='client-component'
+       name='client-component'
+     />
             <Carousel />
         </div>
         

@@ -18,19 +18,23 @@ export const Logo = () =>(
    </NavLink>
 )
 
-export default function MenuList({menu}) {
+export default function MenuList({menu, ToggleMenu}) {
  return (
   <div className={`Nav-menu-wrapper ${menu && 'active'}`}>
      <ul className='Nav-menu'>
      {
       MenuItems.map((Menu, idx) => (
-     <li className={`Nav-menu-items ${menu && 'active'}`} key={idx}>
+         <li
+            
+            className={`Nav-menu-items ${menu && 'active'}`}
+            key={idx}>
          <Link
          className='menu-links'
          to={Menu.link}
          activeClass="active"
          smooth={true}
          duration={500}
+         onClick={ToggleMenu}
         >{Menu.name}</Link>
      </li>
       ))

@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ProjectItems } from './projectItems';
+import { Element } from 'react-scroll';
+
 
 function Projects() {
  return (
-  <div className='projects'>
+   <div className='projects'>
+     <Element
+       id='project-component'
+       name='project-component'
+     />
    <span className="projects-intro">
     <h2>My Recent Projects</h2>
     <p>Here are a few design projects I've worked on recently. Want to see more?

@@ -17,7 +17,7 @@ const Carousel = () => {
   return (
     
     <div className="slides" id="carousel">
-      
+     
       <ion-icon
         onClick={() => dispatch({ type: "PREV" })}
         src={prev}>

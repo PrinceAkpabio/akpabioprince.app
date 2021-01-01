@@ -54,7 +54,7 @@
     z-index: 1;
 
     .footer-logoLink {
-      position: relative;
+      // position: relative;
       display: flex;
       justify-content: center;
       color: $accent;
@@ -70,17 +70,17 @@
       }
     }
     h2 {
-      position: relative;
+      // position: relative;
       font-size: 1.7rem;
       width: 70%;
       // max-width: 24rem;
     }
     p {
-      position: relative;
+      // position: relative;
       margin-bottom: 3rem;
     }
     .footer-icons {
-      position: relative;
+      // position: relative;
       display: flex;
       justify-items: center;
       align-items: center;

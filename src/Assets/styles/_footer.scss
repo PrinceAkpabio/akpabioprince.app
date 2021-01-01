@@ -2,7 +2,7 @@
   position: relative;
   z-index: 3;
   height: auto;
-  padding-bottom: 74%;
+  padding-bottom: 40rem;
   overflow: hidden;
 
   &-fixed,
@@ -50,6 +50,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    // height: 100%;
     z-index: 1;
 
     .footer-logoLink {

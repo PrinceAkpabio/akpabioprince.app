@@ -56,6 +56,6 @@ export const ProjectItems = [
   rgba(0, 128, 128, 1)100%)`
   ,
   overlayText: 'Filter and search rolodex app',
-  pjLink: 'https://princeakpabio.github.io/monsters-rolodex/',
+  pjLink: 'https://monstersrolodexx.netlify.app/',
  },
 ]

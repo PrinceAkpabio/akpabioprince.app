@@ -12,7 +12,7 @@ function Projects() {
        name='project-component'
      />
    <span className="projects-intro">
-    <h2>My Recent Projects</h2>
+    <h1>My Recent Projects</h1>
     <p>Here are a few design projects I've worked on recently. Want to see more?
      <Link
       id='email'

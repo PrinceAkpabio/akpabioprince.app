@@ -17,8 +17,8 @@ const Bio = () => {
        name='bio-component'
      />
      <div className={`bio-content ${state1 && 'active'}`} >
-       <h4>{BioContent.title1}</h4>
-       <h1>{BioContent.title2}</h1>
+       <h4>{BioContent.title2}</h4>
+       <h1>{BioContent.title1}</h1>
        <p>{BioContent.bio}</p>
      </div>
      <ion-icon id='waves' src={waves}></ion-icon>

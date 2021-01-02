@@ -2,11 +2,13 @@ import React from 'react';
 import Bio from '../components/bio/Bio';
 import Hero from '../components/hero/hero';
 import { ParallaxScroll } from '../components/customHooks/parallaxScroll';
+import { Element } from 'react-scroll';
 import star from '../Assets/images/star.svg'
 import moon from '../Assets/images/moon.svg'
 import gear from '../Assets/images/gear.svg'
 import Tools from '../components/tools/tools';
 import Projects from '../components/projects/projects';
+import Carousel from '../components/testimonies/carousel/carousell';
     
 
 
@@ -41,6 +43,11 @@ return (
             <Bio />
             <Tools />
             <Projects />
+             <Element
+       id='client-component'
+       name='client-component'
+     />
+            <Carousel />
         </div>
         
  </div>

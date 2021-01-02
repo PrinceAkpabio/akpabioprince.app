@@ -6,7 +6,7 @@
   padding: 0 1.5rem;
   height: auto;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 
   // overflow: hidden;
 
@@ -29,6 +29,7 @@
     box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
     overflow: hidden;
     transform: translateY(50vw);
+    opacity: 0;
 
     p {
       margin: 1rem 1.5rem;
@@ -36,6 +37,7 @@
 
     &.active {
       transform: translateY(0);
+      opacity: 1;
 
       animation: SlideInLeft 1.5s ease-in;
       @include transition-slow;
@@ -59,12 +61,12 @@
     }
 
     h4 {
-      margin: 0 -25px -17px 0;
+      margin: 0 -85px -17px 0;
     }
     h1 {
       position: relative;
       &::before {
-        @include coloredBorders(26vmin, 3.5vmin, 60%, -7%, $sub1-filtered);
+        @include coloredBorders(100%, 1rem, 60%, 0%, $sub1-filtered);
         z-index: -1;
       }
     }

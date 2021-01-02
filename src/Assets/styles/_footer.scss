@@ -1,0 +1,112 @@
+.footer {
+  position: relative;
+  z-index: 3;
+  height: auto;
+  padding-bottom: 40rem;
+  overflow: hidden;
+
+  &-fixed,
+  &-parallax {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  & > &-fixed {
+    position: relative;
+    overflow-y: hidden;
+    background-color: $accent;
+    color: $primary;
+    border-radius: 10px;
+    margin: 0 2rem;
+    grid-gap: 1rem;
+    z-index: 2;
+
+    #cta {
+      color: $text-link;
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      border: 0.5px solid $primary;
+      border-radius: 180px;
+      font-size: 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $primary;
+        color: $accent;
+        @include transition-ease;
+      }
+    }
+  }
+
+  & > &-parallax {
+    position: absolute;
+    padding-top: 13rem;
+    background-color: $sub1;
+    grid-gap: 2rem;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // height: 100%;
+    z-index: 1;
+
+    .footer-logoLink {
+      // position: relative;
+      display: flex;
+      justify-content: center;
+      color: $accent;
+      width: 40%;
+      height: 9rem;
+
+      .footer-logo {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    h2 {
+      // position: relative;
+      font-size: 1.7rem;
+      width: 70%;
+      // max-width: 24rem;
+    }
+    p {
+      // position: relative;
+      margin-bottom: 3rem;
+    }
+    .footer-icons {
+      // position: relative;
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      margin: 1rem 0;
+    }
+    .footer-links {
+      padding: 1rem;
+      margin: 0 0.5rem;
+      border: 0.5px solid $accent;
+      border-radius: 50%;
+      justify-items: center;
+      align-items: center;
+
+      #footer-socialIcons {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background-color: $accent;
+        border: 1.2px solid $primary;
+        @include transition-ease;
+
+        #footer-socialIcons {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

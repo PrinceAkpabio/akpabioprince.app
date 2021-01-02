@@ -15,7 +15,7 @@ const Naviagtion = () => {
  return (
    <div className='Nav'>
     <Logo />
-    <MenuList menu={menu} />
+    <MenuList menu={menu} ToggleMenu={ToggleMenu} />
     <MenuButton ToggleMenu={ToggleMenu} menu={menu} />
    
   </div>

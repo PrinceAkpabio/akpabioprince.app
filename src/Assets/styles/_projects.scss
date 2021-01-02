@@ -4,6 +4,7 @@
   align-content: space-between;
   width: 100%;
   height: auto;
+  margin-bottom: 5rem;
 
   & > &-intro {
     h2 {
@@ -68,7 +69,7 @@
         }
 
         & > #projectLogo {
-          height: 8rem;
+          height: 10rem;
           width: 12rem;
           background-position: center;
           background-size: cover;

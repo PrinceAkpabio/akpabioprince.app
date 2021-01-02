@@ -2,29 +2,24 @@ import logo from '../../Assets/images/akpabioprincelogo.webp';
 
 export const MenuItems = [
  {
-  link: 'home',
-  name: 'Home',
-  className: '#'
+  link: '/',
+  name: 'Home'
  },
  {
-  link: 'about',
-  name: 'About',
-  className: '#'
+  link: 'bio-component',
+  name: 'About'
  },
  {
-  link: 'projects',
-  name: 'Projects',
-  className: '#'
+  link: 'project-component',
+  name: 'Projects'
  },
  {
-  link: 'clients',
-  name: 'Clients',
-  className: '#'
+  link: 'client-component',
+  name: 'Clients'
  },
  {
-  link: 'contact',
-  name: 'Contact',
-  className: '#'
+  link: 'contact-component',
+  name: 'Contact'
  }
 ]
 

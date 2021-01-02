@@ -120,14 +120,14 @@
   position: relative;
 
   &::after {
-    @include coloredBorders(130px, 15px, 64%, 0, $sub1-filtered);
+    @include coloredBorders(100%, 15px, 64%, 0, $sub1-filtered);
   }
 }
 .cb2 {
   position: relative;
 
   &::after {
-    @include coloredBorders(155px, 15px, 64%, 0, $sub1-filtered);
+    @include coloredBorders(100%, 15px, 64%, 0, $sub1-filtered);
   }
 }
 
@@ -135,6 +135,6 @@
   position: relative;
 
   &::after {
-    @include coloredBorders(150px, 15px, 64%, 0, $sub1-filtered);
+    @include coloredBorders(100%, 15px, 64%, 0, $sub1-filtered);
   }
 }

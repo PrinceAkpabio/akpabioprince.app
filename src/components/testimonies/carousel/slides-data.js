@@ -4,10 +4,10 @@ import slide2Img from '../../../Assets/images/slide2img.jpg';
 const slides = [
     {
     h1: "Prince did a",
-    h2: "Through the ton of ideas and working on the",
+    h2: "job. Through the ton of ideas and working on the",
     h3: "We created a perfectly ",
     h4: "site. We did a great job together.",
-    cb1: "phenomenal job.",
+    cb1: "phenomenal",
     cb2: " little details,",
     cb3: "beautiful",
     img: slide1Img,

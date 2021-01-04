@@ -60,8 +60,8 @@ export const ProjectItems = [
     #262147 100%
   )`
   ,
-  overlayText: 'Speech to text web app that doubles as a text editor',
-  pjLink:` https://speech2textapp.netlify.app/`,
+  overlayText: 'Speech to text web app that doubles as a notepad',
+  pjLink:` https://voicepadapp.netlify.app/`,
  },
  {
   id: '5',

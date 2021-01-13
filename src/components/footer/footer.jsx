@@ -10,7 +10,7 @@ const Footer = () => {
 
  const Icons = [
   {
-   Id: '1',
+   id: '1',
    si: twitter,
    link: 'https://twitter.com/princeakpabio_'
   },
@@ -70,11 +70,9 @@ const Footer = () => {
       Icons.map(item => (
        <Link
         key={item.id}
-        
-       to={{
+        to={{
         pathname: item.link
         }}
-        
         target='_blank'
         className='footer-links'
        >

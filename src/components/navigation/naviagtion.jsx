@@ -1,25 +1,57 @@
-import React, {useState} from 'react'
-import MenuButton from '../button/menuButton';
-import MenuList, { Logo } from './menuList';
-// import Scroll from 'react-scroll';
-// import { Link} from 'react-scroll';
-
-// const ScrollLink = Scroll.Link;
+import React, { useState, useEffect, useRef } from "react";
+import MenuButton from "../button/menuButton";
+import MenuList, { Logo } from "./menuList";
 
 const Naviagtion = () => {
- const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
+  const navRef = useRef();
 
- const ToggleMenu = () => {
-  setMenu(prevMenu => !prevMenu)
- };
- return (
-   <div className='Nav'>
-    <Logo />
-    <MenuList menu={menu} ToggleMenu={ToggleMenu} />
-    <MenuButton ToggleMenu={ToggleMenu} menu={menu} />
-   
-  </div>
- )
-}
+  const ToggleMenu = () => {
+    setMenu((prevMenu) => !prevMenu);
+  };
+  const handleClickOutside = (e) => {
+    if (!navRef.current.contains(e.target)) {
+      setMenu(false);
+    }
+  };
 
-export default Naviagtion
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      document.documentElement.style.setProperty(
+        "--scroll-y",
+        `${window.scrollY}px`
+      );
+    };
+
+    if (menu) {
+      document.documentElement.style.getPropertyValue("--scroll-y");
+      const body = document.body;
+      body.style.height = "100vh";
+      body.style.overflowY = "hidden";
+    } else if (!menu) {
+      document.documentElement.style.getPropertyValue("--scroll-y");
+      const body = document.body;
+      body.style.height = "";
+      body.style.overflowY = "";
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  return (
+    <div className="Nav">
+      <Logo />
+      <MenuList menu={menu} ToggleMenu={ToggleMenu} navRef={navRef} />
+      <MenuButton ToggleMenu={ToggleMenu} menu={menu} />
+    </div>
+  );
+};
+
+export default Naviagtion;

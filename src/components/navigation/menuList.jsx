@@ -14,7 +14,7 @@ export const Logo = () => (
   </NavLink>
 );
 
-export default function MenuList({ menu, ToggleMenu, navRef }) {
+export default function MenuList({ menu, navRef }) {
   return (
     <div ref={navRef} className={`Nav-menu-wrapper ${menu && "active"}`}>
       <ul className="Nav-menu">
@@ -26,7 +26,6 @@ export default function MenuList({ menu, ToggleMenu, navRef }) {
               activeClass="active"
               smooth={true}
               duration={500}
-              onClick={ToggleMenu}
             >
               {Menu.name}
             </Link>

@@ -18,7 +18,7 @@ const Naviagtion = () => {
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,12 +43,12 @@ const Naviagtion = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, [menu]);
 
   return (
     <div className="Nav">
       <Logo />
-      <MenuList menu={menu} ToggleMenu={ToggleMenu} navRef={navRef} />
+      <MenuList menu={menu} navRef={navRef} />
       <MenuButton ToggleMenu={ToggleMenu} menu={menu} />
     </div>
   );

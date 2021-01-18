@@ -48,8 +48,8 @@ const Naviagtion = () => {
   return (
     <div className="Nav">
       <Logo />
-      <MenuList menu={menu} navRef={navRef} />
-      <MenuButton ToggleMenu={ToggleMenu} menu={menu} />
+      <MenuList menu={menu} />
+      <MenuButton ToggleMenu={ToggleMenu} menu={menu} navRef={navRef} />
     </div>
   );
 };

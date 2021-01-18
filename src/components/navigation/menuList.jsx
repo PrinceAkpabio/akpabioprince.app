@@ -14,9 +14,9 @@ export const Logo = () => (
   </NavLink>
 );
 
-export default function MenuList({ menu, navRef }) {
+export default function MenuList({ menu }) {
   return (
-    <div ref={navRef} className={`Nav-menu-wrapper ${menu && "active"}`}>
+    <div className={`Nav-menu-wrapper ${menu && "active"}`}>
       <ul className="Nav-menu">
         {MenuItems.map((Menu, idx) => (
           <li className={`Nav-menu-items ${menu && "active"}`} key={idx}>

@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function MenuButton({ menu, ToggleMenu }) {
+export default function MenuButton({ menu, ToggleMenu, navRef }) {
   return (
-    <span className="Nav-mb-menu" onClick={ToggleMenu}>
+    <span ref={navRef} className="Nav-mb-menu" onClick={ToggleMenu}>
       {menu ? (
         <ion-icon name="close-outline"></ion-icon>
       ) : (

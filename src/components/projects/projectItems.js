@@ -60,8 +60,8 @@ export const ProjectItems = [
     #262147 100%
   )`
   ,
-  overlayText: 'Speech to text web app that doubles as a notepad',
-  pjLink:` https://voicepadapp.netlify.app/`,
+  overlayText: 'Fullstack Speech to text web app that doubles as a notepad',
+  pjLink:`https://voicepadx.herokuapp.com/`,
  },
  {
   id: '5',

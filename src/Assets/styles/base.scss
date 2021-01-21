@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Texturina:wght@200&display=swap");
+
+@import "./variables";
+@import "./_navigation";
+@import "./_hero";
+@import "./_bio";
+@import "./_homepage";
+@import "./_tools";
+@import "./_projects";
+@import "./_carousell";
+@import "./_footer";
+/* 
+font-family: 'Texturina', serif;
+font-family: 'Yeon Sung', cursive; 
+font-family: 'Dancing Script', cursive;
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: $primary;
+  position: relative;
+  overflow-x: hidden;
+  color: $text-color;
+  // overflow-y:hidden;
+
+}
+
+h1,
+h2 {
+  font-family: $font1;
+}
+h3,
+h4,
+p {
+  font-family: $font2;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: var(--clamph2);
+}
+h3 {
+  font-size: var(--clamph3);
+}
+h4,
+p {
+  font-weight: weight(regular);
+  line-height: 1.8;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+a {
+  text-decoration: none;
+  color: $accent;
+}
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.row {
+  margin: 4em 20px;
+}
+.overlay::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(250, 189, 153, 0.644) 0%,
+  //   rgba(255, 186, 147, 0.5) 18%,
+  //   rgba(159, 95, 128, 0.6) 90%,
+  //   rgba(0, 0, 0, 0.8) 100%
+  // );
+}

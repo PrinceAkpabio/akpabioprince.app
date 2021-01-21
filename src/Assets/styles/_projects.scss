@@ -89,6 +89,9 @@
         width: 100%;
         border-radius: 10px;
 
+        & > #overlay-text {
+          padding: 0 0.5rem;
+        }
         & > #overlayLink {
           margin-top: 1rem;
           padding: 1rem;
@@ -102,6 +105,18 @@
           &:hover {
             background-color: $accent;
             color: $primary;
+          }
+        }
+        & > #overlayLink-github {
+          margin-top: 1rem;
+          color: inherit;
+          cursor: pointer;
+          font-size: 1.19rem;
+          z-index: 29;
+
+          &:hover {
+            // background-color: $accent;
+            color: $accent;
           }
         }
       }

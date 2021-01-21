@@ -20,6 +20,7 @@ export const ProjectItems = [
   ,
   overlayText: 'Doula brand for passionate and aspiring birthworkers',
   pjLink: 'https://doulastartup.netlify.app/',
+  pjgithub: 'https://github.com/PrinceAkpabio/doula-startup'
  },
  {
   id: '2',
@@ -33,7 +34,8 @@ export const ProjectItems = [
   )`
   ,
   overlayText: 'Flixi Movie App',
-  pjLink: 'https://flixiapp.netlify.app/',
+   pjLink: 'https://flixiapp.netlify.app/',
+  pjgithub: 'https://github.com/PrinceAkpabio/flixi-movie-app'
  },
  {
   id: '3',
@@ -47,7 +49,8 @@ export const ProjectItems = [
   )`
   ,
   overlayText: 'Urban clothing store concept',
-  pjLink: 'https://urbanclothing.netlify.app/',
+   pjLink: 'https://urbanclothing.netlify.app/',
+  pjgithub: 'https://github.com/PrinceAkpabio/urban-clothing'
  },
  {
   id: '4',
@@ -61,7 +64,8 @@ export const ProjectItems = [
   )`
   ,
   overlayText: 'Fullstack Speech to text web app that doubles as a notepad',
-  pjLink:`https://voicepadx.herokuapp.com/`,
+   pjLink: `https://voicepadx.herokuapp.com/`,
+   pjgithub: 'https://github.com/PrinceAkpabio/voicepadx'
  },
  {
   id: '5',
@@ -72,6 +76,7 @@ export const ProjectItems = [
   rgba(0, 128, 128, 1)100%)`
   ,
   overlayText: 'Filter and search rolodex app',
-  pjLink: 'https://monstersrolodexx.netlify.app/',
+   pjLink: 'https://monstersrolodexx.netlify.app/',
+   pjgithub: 'https://github.com/PrinceAkpabio/MonsterRolodex'
  },
 ]
